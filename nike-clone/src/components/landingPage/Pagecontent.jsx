@@ -20,15 +20,16 @@ const Pagecontent = () => {
   };
 
   const handleBuy = () => {
-    navigate("/home")
     dispatch({
         type: actionType.SHOW_PRODUCTS,
         showProducts: !showProducts,
        })
-    //    console.log("lklklklklklk");
+    navigate("/home")
+   
+       console.log("lklklklklklk");
   }
 
-//   console.log("showProducts",showProducts);
+  console.log("showProducts",showProducts);
 
   const fadeRight = {
     hidden: { opacity: 0, x: -1000 },

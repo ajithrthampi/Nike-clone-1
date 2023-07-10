@@ -13,26 +13,34 @@ const Maincontent = () => {
     const [{ shoeItems }, dispatchs] = useStateValue()
     const [{ filterValue }, dispatchss] = useStateValue()
     const [all_show_items, setall_show_items] = useState([])
+    const [{ showProducts }] = useStateValue()
 
+    
+    
     
 
 
     const handleFilter = () => {
         setIsFilterVisible(!isFilterVisible);
         dispatch({
-            type: actionType.FILTER_SHOW,
+            type: actionType.FILTER_SHOW,   
             filterShow: !filterShow,
            })
     }
 
     useEffect(() => {
         setall_show_items(shoeItems);
+        console.log("shoeItems",shoeItems);
     },[shoeItems])
 
     useEffect(() => {
-        setall_show_items(shoeItems?.filter(n => n.category === filterValue));
-
+        if(filterValue) {
+             setall_show_items(shoeItems?.filter(n => n.category === filterValue));
+        console.log("filterValue",filterValue); 
+        }
+      
     },[filterValue])
+   
 
 
     return (

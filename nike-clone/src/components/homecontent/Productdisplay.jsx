@@ -11,6 +11,7 @@ import axios from 'axios'
 const Productdisplay = ({isFilterVisible, data, flag}) => { // console.log("dataaaa", data);
 
     const [loading, setLoading] = useState(true);
+    const [{ showProducts }] = useStateValue()
     const [
         {
             filterShow
@@ -45,7 +46,7 @@ const Productdisplay = ({isFilterVisible, data, flag}) => { // console.log("data
         localStorage.setItem("Product_details", JSON.stringify(item))
     }
 
-    // console.log(data);
+    // console.log(showProducts);   
 
 
     return (
