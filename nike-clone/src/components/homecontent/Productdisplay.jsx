@@ -75,8 +75,8 @@ const Productdisplay = ({isFilterVisible, data, flag}) => { // console.log("data
                         key={
                             item.id
                     }>
-                        <div className='bg-[#f7f7f7] w-full md:h-[370px] sm:h-[250px] h-[150px] relative hover:opacity-50 transition ease-out delay-150'>
-                            <img className='absolute  top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full object-contain'
+                        <div className='bg-[#f7f7f7] w-full md:h-[370px] sm:h-[250px] h-[150px] relative hover:opacity-50 transition ease-out delay-150 '>
+                            <img className='absolute  top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full object-contain md:px-8 sm:px-4 px-2'
                                 src={
                                     item.imageURL
                                 }

@@ -5,6 +5,7 @@ import Maincontent from '../components/homecontent/Maincontent'
 
 import CartContainer from '../components/homecontent/CartContainer'
 import {useStateValue} from '../context/StateProvider'
+import Footer from '../components/footer/footer'
 
 const Homepage = () => {
 
@@ -21,7 +22,9 @@ const Homepage = () => {
             {
             cartShow && (
                 <CartContainer/>)
-            } </div>
+            } 
+             {/* <Footer /> */}
+            </div>
     )
 }
 
