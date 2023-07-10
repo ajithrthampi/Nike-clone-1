@@ -22,7 +22,7 @@ const Nike = () => {
          initial="hidden"
          animate="visible"
         //  transition={{duration: 0.6}}
-        className='hidden md:block text-[350px] font-anto first-line:font-bold text-transparent text  
+        className='hidden md:block text-[350px] font-anto first-line:font-bold text-transparent  text  
         bg-clip-text bg-gradient-to-r from-[#353535] to-[#151515] tracking-tighter'>
             NIKE
         </motion.h1>

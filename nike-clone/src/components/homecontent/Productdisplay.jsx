@@ -7,6 +7,7 @@ import {motion, AnimatePresence} from "framer-motion"
 import FilterColor from './FilterColor'
 import {useStateValue} from '../../context/StateProvider'
 import axios from 'axios'
+import Loading from './Loading'
 
 const Productdisplay = ({isFilterVisible, data, flag}) => { // console.log("dataaaa", data);
 
@@ -93,7 +94,9 @@ const Productdisplay = ({isFilterVisible, data, flag}) => { // console.log("data
                         </div>
                     </div>
                 )) : (
-                    <div>Loading</div>
+                    <div>
+                        <Loading />
+                    </div>
                 ))
             } </motion.div>
             <div className='slg:hidden'>
