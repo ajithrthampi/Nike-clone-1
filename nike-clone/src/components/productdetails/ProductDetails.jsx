@@ -68,7 +68,7 @@ const ProductDetails = () => {
             setCartStatus(true)
             setTimeout(() => {
                 setCartStatus(false)
-            }, 3000);
+            }, 1000);
         }
 
 
