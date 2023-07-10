@@ -46,8 +46,6 @@ const ProductDetails = () => {
             setTimeout(() => {
                 setStatus(false)
             }, 3000);
-          
-
         }
     }, [items]);
 

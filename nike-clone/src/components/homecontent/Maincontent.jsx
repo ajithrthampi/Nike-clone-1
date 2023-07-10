@@ -34,14 +34,6 @@ const Maincontent = () => {
 
     },[filterValue])
 
-    // console.log("all products",all_show_items);
-    // console.log("filter_show",filterShow);
-
-   
-
-    // console.log("filterValue,filterValue",filterValue);
-
-
 
     return (
         <div className='md:px-16 px-4 pt-10'>
@@ -75,7 +67,8 @@ const Maincontent = () => {
                {/*Product Display  */}
             <motion.div
             className='mt-10'>
-                <Productdisplay isFilterVisible={isFilterVisible} flag={true} data={ all_show_items
+                <Productdisplay isFilterVisible={isFilterVisible} flag={true} data={ 
+                    all_show_items
                     // shoeItems?.filter(n => n.category === filterValue ) 
                     }/>
             </motion.div>

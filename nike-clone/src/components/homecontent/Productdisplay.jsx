@@ -41,9 +41,11 @@ const Productdisplay = ({isFilterVisible, data, flag}) => { // console.log("data
     // navigate
     const handleClick = (item) => {
         navigate("/details")
-        console.log('item', item);
+        // console.log('item', item);
         localStorage.setItem("Product_details", JSON.stringify(item))
     }
+
+    // console.log(data);
 
 
     return (

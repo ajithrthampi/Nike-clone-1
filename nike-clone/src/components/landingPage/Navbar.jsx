@@ -3,8 +3,16 @@ import logo from "../../assets/logo.png"
 import {CiSearch} from 'react-icons/ci';
 import {BiSolidShoppingBag} from 'react-icons/bi';
 import {HiViewGrid} from 'react-icons/hi';
+import { useNavigate } from "react-router-dom";
 
 export default function NavBar() {
+
+    const navigate = useNavigate()
+
+    const handleclick = () => {
+      navigate("/home")
+    }
+
     const [navbar, setNavbar] = useState(false);
 
     return (
@@ -45,16 +53,16 @@ export default function NavBar() {
                         }`
                     }>
                         <ul className="items-center justify-center lg:gap-7  space-y-8 md:flex md:space-x-6 md:space-y-0 text-white">
-                            <li className="lg:text-sm text-[12px] font-poppins hover:text-gray-400">
+                            <li className="lg:text-sm text-[12px] font-poppins hover:text-gray-400 cursor-pointer" onClick={handleclick}>
                                 <h4>Men</h4>
                             </li>
-                            <li className="lg:text-sm text-[12px] font-poppins hover:text-gray-400">
+                            <li className="lg:text-sm text-[12px] font-poppins hover:text-gray-400 cursor-pointer" onClick={handleclick}>
                                 <h4>Women</h4>
                             </li>
-                            <li className="lg:text-sm text-[12px] font-poppins hover:text-gray-400">
+                            <li className="lg:text-sm text-[12px] font-poppins hover:text-gray-400 cursor-pointer" onClick={handleclick}>
                                 <h4>News & Featured</h4>
                             </li>
-                            <li className="lg:text-sm text-[12px] font-poppins hover:text-gray-400">
+                            <li className="lg:text-sm text-[12px] font-poppins hover:text-gray-400 cursor-pointer">
                                 <h4>About us</h4>
                             </li>
                             <li>

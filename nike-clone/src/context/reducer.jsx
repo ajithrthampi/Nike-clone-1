@@ -5,6 +5,7 @@ export const actionType = {
     SET_SHOE_ITEMS: "SET_SHOE_ITEMS",
     FILTER_VALUE: "FILTER_VALUE",
     SET_CARTITEMS: "SET_CARTITEMS",
+    SHOW_PRODUCTS: "SHOW_PRODUCTS"
 }
 
 const reducer = (state, action) => {
@@ -45,6 +46,12 @@ const reducer = (state, action) => {
                             return {
                                 ...state,
                                 cartItems : action.cartItems,
+                            };
+
+                            case actionType.SHOW_PRODUCTS:
+                            return {
+                                ...state,
+                                showProducts : action.showProducts,
                             };
     
 

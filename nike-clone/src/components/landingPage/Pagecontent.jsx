@@ -4,11 +4,16 @@ import { motion, spring } from "framer-motion"
 import { useTime } from "framer-motion"
 import { useNavigate } from 'react-router-dom'
 import "./circle.css";
+import { useStateValue } from '../../context/StateProvider'
+import { actionType } from '../../context/reducer'
 
 const Pagecontent = () => {
 
     const [shouldRotate, setShouldRotate] = useState(false);
+    const [{ showProducts }, dispatch] = useStateValue()
     const navigate = useNavigate()
+
+  
 
   const handleAnimationEnd = () => {
     setShouldRotate(true);
@@ -16,7 +21,14 @@ const Pagecontent = () => {
 
   const handleBuy = () => {
     navigate("/home")
+    dispatch({
+        type: actionType.SHOW_PRODUCTS,
+        showProducts: !showProducts,
+       })
+    //    console.log("lklklklklklk");
   }
+
+//   console.log("showProducts",showProducts);
 
   const fadeRight = {
     hidden: { opacity: 0, x: -1000 },

@@ -10,4 +10,5 @@ export const initialState = {
     shoeItems: null,
     filterValue: null,
     cartItems: cartInfo,
+    showProducts: false
 }
