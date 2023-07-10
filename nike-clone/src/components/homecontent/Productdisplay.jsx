@@ -46,7 +46,7 @@ const Productdisplay = ({isFilterVisible, data, flag}) => { // console.log("data
         localStorage.setItem("Product_details", JSON.stringify(item))
     }
 
-    // console.log(showProducts);   
+    
 
 
     return (

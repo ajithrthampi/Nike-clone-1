@@ -81,6 +81,14 @@ const ProductDetails = () => {
         }
     }, [items]);
 
+    const getProducts =(newProducts) => {
+        if(newProducts){
+            setProductDetails(newProducts)
+        }
+        console.log("newProducts",newProducts);
+    }
+    
+
 
     return (
         <>
@@ -204,7 +212,7 @@ const ProductDetails = () => {
                     </div>
                 </div>
 
-                <MoreProducts/>
+                <MoreProducts getProducts ={getProducts}/>
             </div>
 
             {

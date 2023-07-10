@@ -3,7 +3,8 @@ import product1 from "../../assets/product1.png"
 import product2 from "../../assets/product2.png"
 import SampleProducts from './SampleProducts'
 import {useStateValue} from '../../context/StateProvider';
-const MoreProducts = () => {
+
+const MoreProducts = ({getProducts}) => {
 
     const [
         {
@@ -28,16 +29,23 @@ if (!shoeItems) {
   // Get a random subset of 8 items from shoeItems
   const randomItems = shuffleArray(shoeItems).slice(0, 8);
 
+  const addProduct = (item) => {
+    localStorage.setItem("Product_details", JSON.stringify(item))
+    const getAll = JSON.parse(localStorage.getItem("Product_details"))
+    getProducts(getAll)
+    // console.log(getAll);
+  }
+
     return (
         <div className='mt-16 px-5 lg:px-0'>
             <div className=''>
                 <h1 className='font-anto text-lg font-black'>You may also like</h1>
                 <div className="w-full my-12 overflow-x-scroll flex items-center gap-4 no-scrollbar">
                     {randomItems && randomItems.map((item)=> (
-                         <div key={item.id}>
+                         <div key={item.id} onClick={() =>addProduct(item)}>
                         <div className="w-300 md:w-[375px] md:h-[370px] bg-[#f7f7f7] shadow-md backdrop-blur-lg">
                             <div className='w-full  items-center justify-between '>
-                                <img className='md:absolute md:top-1/2 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 md:px-6 w-56 object-contain h-56 md:w-full md:h-full'
+                                <img className='md:absolute md:top-1/2 md:left-1/2 md:transform cursor-pointer md:-translate-x-1/2 md:-translate-y-1/2 md:px-6 w-56 object-contain h-56 md:w-full md:h-full'
                                     src={item?.imageURL}
                                     alt=""/>
                             </div>
