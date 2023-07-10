@@ -109,18 +109,18 @@ const CartContainer = () => {
                                                      justify-evenly px-8 py-2'>
                         <div className='w-full flex items-center justify-between'>
                             <p className='text-lg'>Sub Total</p>
-                            <p className='text-lg'>$ {tot}</p>
+                            <p className='text-lg'>₹ {tot}</p>
                         </div>
                         <div className='w-full flex items-center justify-between'>
                             <p className='text-lg'>Delivery</p>
-                            <p className='text-lg'>$ 2.5</p>
+                            <p className='text-lg'>₹ 2.5</p>
                         </div>
 
                         <div className='w-full border-b border-gray-600 my-2'></div>
 
                         <div className='w-full flex items-center justify-between'>
                             <p className='text-xl font-semibold'>Total</p>
-                            <p className='text-xl font-semibold'>{tot + 2.5}</p>
+                            <p className='text-xl font-semibold'> ₹{tot + 2.5}</p>
                         </div>
 
                         <motion.button className='w-full p-2 rounded-full bg-gradient-to-tr from-gray-100 to-gray-300 text-lg my-2

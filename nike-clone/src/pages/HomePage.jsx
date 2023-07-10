@@ -5,7 +5,7 @@ import Maincontent from '../components/homecontent/Maincontent'
 
 import CartContainer from '../components/homecontent/CartContainer'
 import {useStateValue} from '../context/StateProvider'
-import Footer from '../components/footer/footer'
+// import Footer from '../components/footer/footer'
 
 const Homepage = () => {
 

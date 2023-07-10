@@ -70,7 +70,7 @@ const Productdisplay = ({isFilterVisible, data, flag}) => { // console.log("data
                 {
 
                 (data && data.length > 0 ? data.map((item, index) => (
-                    <div className=' pb-5'
+                    <div className=' pb-5 cursor-pointer  '
                         onClick={() => handleClick(item)}
                         key={
                             item.id
@@ -87,7 +87,7 @@ const Productdisplay = ({isFilterVisible, data, flag}) => { // console.log("data
                                 {
                                 item.title
                             } </h1>
-                            <h4 className='text-gray-400'>$ {
+                            <h4 className='text-gray-400'>₹ {
                                 item.price
                             }</h4>
                         </div>
