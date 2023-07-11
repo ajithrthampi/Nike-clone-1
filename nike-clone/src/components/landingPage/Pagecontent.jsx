@@ -136,7 +136,7 @@ const Pagecontent = () => {
                  onAnimationComplete={() => {
                     setShouldRotate(false); // Stop the slowing down animation
                   }}
-                className=' lg:h-[320px] md:h-[200px] h-full w-full bg-red-5 -rotate-45  ' src={nike1} alt="" />
+                className=' lg:h-[320px] md:h-[200px] h-full w-full bg-red-5 -rotate-45  lg:pt-0 md:pt-16 ' src={nike1} alt="" />
             </motion.div>
 
 
